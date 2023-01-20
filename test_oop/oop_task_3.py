@@ -8,6 +8,6 @@ class Page:
         driver = webdriver.Chrome()
         driver.get(self. url)
 
-hom =  Page("https://stepik.org/")
+home =  Page("https://stepik.org/")
 hom.get()
 

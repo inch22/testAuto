@@ -1,6 +1,7 @@
+# создайте класс Page, в классе нет методов и аргументов объекта, только 1 аргумент класса url
 class Page:
+    url = "https://guruvkusa.ru/"
 
-    def __init__(self, url):
-        self.url = url
 
-home = Page("https://guruvkusa.ru/")
+
+

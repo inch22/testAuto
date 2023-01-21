@@ -1,19 +1,23 @@
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
+# создайте класс Check класс принимают 1 аргумент при инициализации (Loc)
 class Check:
-    def __init__(self, url):
-        self.url = url
+    def __init__(self, loc):
+        self.loc = loc
 
-    def exist(self):
+
+    def exist(self, url): #создаем метод exist, который принимает 2 аргумента self, url
+            #реализуем переход на url,
             driver = webdriver.Chrome()
-            driver.exist(self. url)
+            driver.get(url)
+            #поиск элемента по локатору
+            input_username = driver.find_element(By.CSS_SELECTOR, self.loc)
+            #вывод в консоль ответа, найден элемент или нет
+            if input_username is None:
+                    print("Элемент не найден")
+            else:
+                    print("Элемент найден")
 
-home =  Check("https://guruvkusa.ru/")
-home.exist()
-#driver = webdriver.Chrome()
-input_username = driver.find_element(By.CSS_SELECTOR,'body > div.page_layout.page_layout-clear > header > div.layout.widget-type_widget_v4_header_4_6b677bbb4943ee7655d464f5e60d70e2 > div > div.header.header_no-languages > div.header-mobile-panel > div > div.header-mobile-panel__bottom > button')
-if input_username is None:
-    print("Элемент не найден")
-else:
-    print("Элемент найден")
+

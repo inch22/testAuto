@@ -1,7 +1,9 @@
 a = True
 
-
-if a >=0:
-    print('значение a = True')
-else:
-    print('значение a = False')
+def dis(a):
+    if a:
+         a = False
+    else:
+         a = True
+    return a
+print(dis(a))

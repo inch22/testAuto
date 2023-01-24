@@ -1,3 +1,5 @@
 class BasePage:
+        def __init__(self):
+
         def vizit(self, url):
-            url = 'str'
+            self (url) = url

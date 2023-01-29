@@ -9,5 +9,5 @@ class Page:
         driver.get(self. url)
 
 home =  Page("https://stepik.org/")
-hom.get()
+home.get()
 
